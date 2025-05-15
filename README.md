@@ -1,12 +1,18 @@
 # simple-dl
 
-Simple-dl is a project aiming to create a *simple* web-based front end solution for the [youtube-dl](https://github.com/ytdl-org/youtube-dl) CLI.
+Simple-dl is a project aiming to create a *simple*, web-based, self-hosted solution for the [youtube-dl](https://github.com/ytdl-org/youtube-dl) CLI.
 
 While there are some projects that fill-in the same niche, like:
 - [YoutubeDL Material](https://github.com/Tzahi12345/YoutubeDL-Material)
 - [AllTube](https://github.com/Rudloff/alltube)
 
 They either not fullfilling all the needs, have missing features, or are in other ways lackluster.
+
+While the more roboust projects like:
+- [TubeSync](https://github.com/meeb/tubesync)
+- [TubeArchivist](https://github.com/tubearchivist/tubearchivist)
+
+Target to create experience more resembling those with -arr stack, which is not the scope of the project.
 
 ## Design
 >[!NOTE]
