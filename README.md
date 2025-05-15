@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6f954808-cde6-4bab-bfb5-769763bbcffe)# simple-dl
+# simple-dl
 
 Simple-dl is a project aiming to create a *simple* web-based front end solution for the [youtube-dl](https://github.com/ytdl-org/youtube-dl) CLI.
 
@@ -22,6 +22,9 @@ They either not fullfilling all the needs, have missing features, or are in othe
 ### Common components
 #### Action Buttons
 Action buttons are small, circular buttons present on video cards, they are in the following variants:
+
+>[!NOTE]
+>You may see those icons changing across the screenshots below, that's cause the icons changed across the design process, however the icons you see here are final.
 
 ![image](https://github.com/user-attachments/assets/b1ccd6ed-3b07-4f00-ba1d-ec385bb767dd)
 
@@ -61,7 +64,7 @@ User can choose the download format globally, pasting more then one link, separa
 That fades away over time.
 
 Starting download process causes additional input fields to disappear, and action buttons take on new roles. Additionaly a status bar slides out:
-23
+
 ![image](https://github.com/user-attachments/assets/d7295683-01de-4578-989a-98135f5094b2)
 
 Action buttons now double as status indicators:
@@ -78,16 +81,47 @@ Status component can be extended, to show the live console output from youtube-d
 After all downloads are completed bottom button is replaced with a download all prompt (additional to a single downloads that are available via the status buttons on the right of the video links).
 
 Pressing the download all prompt will result in opening a filename selection pop-up with pregenerated name
+
 ![image](https://github.com/user-attachments/assets/5dd1917d-efed-4c88-b7ac-1e0206512b6b)
+
 Upon tapping the text field you should be prompted with system file browser prompt
 
 Clearing the queue after downloads is a two-step process
+
 ![image](https://github.com/user-attachments/assets/be5c6892-ed19-4a54-b1fc-a60fb8da4172)
 
 First tap on the clear all button will result in removing all the successfull downloads, only the second time the app will remove everything.
 
 All destructive (and unreversible) actions are hold-to-confirm to prevent user from accidentally tapping on the button, as shown below:
+
 ![image](https://github.com/user-attachments/assets/c6779646-f45a-4966-af53-7ed86f45deda)
+
+### Tablet
+![image](https://github.com/user-attachments/assets/3ed91c2a-cb28-4a6a-934e-4742b6d46831)
+
+More space means more functionality, things that change mainly:
+- Monolithic queue is replaced with one card per video, introducing:
+    - Drag&Drop reordering
+    - Per video format choice
+- Instead of having Status collapsed below, we now have it side by side with video cards, collapsed into the side drawer (hidden by default)
+ 
+The removal toast changed slightly as well, it now replaces full video card:
+![image](https://github.com/user-attachments/assets/f7eb1a32-d3cb-4191-abb4-06ab403908d2)
+
+With Status folded, there's now a progress bar that will later turn into Download as ZIP button
+![image](https://github.com/user-attachments/assets/947a2f09-ae57-43b2-bd45-5cf272888846)
+
+When overflowing now instead of whole page being scrollable, Status (Console) will stretch out to fill the whole viewport height, while the video queue becomes fully scrollable
+![image](https://github.com/user-attachments/assets/cbaf9669-988b-4bd7-8b1c-b28a9c038b22)
+
+Same as before upon completion, if there were any errors the console window will expand on it's own
+![image](https://github.com/user-attachments/assets/d5a57d20-aacd-4be7-89fe-d7d32f653f22)
+
+If Status pane is extended behaviour is similar to mobile - initially only Download as ZIP is visible, but upon downloading any of the videos the Clear All is visible as well
+
+And same as on mobile, returning to initial screen with no videos in queue is a two-step process
+![image](https://github.com/user-attachments/assets/03444e32-e975-4db9-95bb-ced66fee93e7)
+
 
 ### Full Design Sheets
 #### Mobile
